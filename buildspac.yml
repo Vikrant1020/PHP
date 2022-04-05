@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      php: 7.4
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - apt install php
+      - apt install libapache2-mad-php
+      - apt install libapache2-mod-php
+      - systemctl restart apache2
+      - apt install git
+  build:
+    commands:
+      - cd /var/www/html/
+      - rm index.html
+      - git clone  https://github.com/Vikrant1020/PHP.git
+artifacts:
+  files:
+    - '**/*'
