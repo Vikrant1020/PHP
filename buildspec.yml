@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies.
-      - apt-get install php -y
+     # - apt-get install php -y
       - apt-get install apache2 -y
       - apt-get install libapache2-mad-php -y
       - systemctl restart apache2
