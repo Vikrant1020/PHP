@@ -2,7 +2,6 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get install php -y
       - apt install apache2
       - apt-get install libapache2-mad-php -y
       #- systemctl restart apache2
@@ -15,7 +14,7 @@ phases:
      # - apt-get install php -y
       #- apt install apache2
       #- apt-get install libapache2-mad-php -y
-      #- systemctl restart apache2
+      - systemctl restart apache2
       - apt-get install git -y
   build:
     commands:
