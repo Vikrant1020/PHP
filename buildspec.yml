@@ -7,7 +7,7 @@ phases:
     commands:
       - echo Installing source NPM dependencies.
      # - apt-get install php -y
-      - apt-get install -y httpd
+      - apt install apache2
       - apt-get install libapache2-mad-php -y
       - systemctl restart apache2
       - apt-get install git -y
