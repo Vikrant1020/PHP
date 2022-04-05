@@ -1,24 +1,19 @@
 version: 0.2
 phases:
   install:
-    commands:
-      - apt install apache2
-      - apt-get install libapache2-mad-php -y
-      #- systemctl restart apache2
-      - apt-get install git -y
     runtime-versions:
       php: 7.4
   pre_build:
     commands:
       - echo Installing source NPM dependencies.
-     # - apt-get install php -y
+     #- apt-get install php -y
       #- apt install apache2
       #- apt-get install libapache2-mad-php -y
       - systemctl restart apache2
       - apt-get install git -y
   build:
     commands:
-      - rm /var/www/html/index.html
+      #- rm /var/www/html/index.html
       #- rm index.html
       - git clone  https://github.com/Vikrant1020/PHP.git
 artifacts:
